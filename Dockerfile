@@ -48,6 +48,7 @@ FROM base as app
 COPY --chown=abc:abc package*.json ./
 COPY --from=base /usr/local/bin /usr/local/bin
 COPY --from=base /usr/local/lib /usr/local/lib
+COPY --chown=abc:abc src /app/src
 COPY --chown=abc:abc scripts /app/scripts
 COPY --chown=abc:abc static /app/static
 COPY --chown=abc:abc config /app/config
